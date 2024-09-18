@@ -3,10 +3,10 @@ package vn.project.web_sale_book.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.math.BigDecimal;
 import java.util.List;
-
-@Data
 @Entity
+@Data
 @Table(name = "book")
 public class Book {
     @Id
@@ -14,23 +14,23 @@ public class Book {
     @Column(name = "code_book")
     private int codeBook;
 
-    @Column(name = "name_book", length = 256)
+    @Column(name = "name_book", length = 255)
     private String nameBook;
 
-    @Column(name = "author", length = 256)
+    @Column(name = "author", length = 255)
     private String author;
 
-    @Column(name = "isbn", length = 256)
+    @Column(name = "isbn", length = 255)
     private String ISBN;
 
-    @Column(name = "describe", columnDefinition = "text")
-    private String describe;
+    @Column(name = "description", columnDefinition = "text")
+    private String description;
 
     @Column(name = "price_original")
-    private double priceOriginal;
+    private BigDecimal priceOriginal;
 
     @Column(name = "price_sale")
-    private double priceSale;
+    private BigDecimal priceSale;
 
     @Column(name = "quantity")
     private int quantity;

@@ -13,7 +13,7 @@ public class Category {
     @Column(name = "code_category")
     private int codeCategory;
 
-    @Column(name = "name_category", length = 256)
+    @Column(name = "name_category")
     private String nameCategory;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {
@@ -21,7 +21,7 @@ public class Category {
             CascadeType.DETACH, CascadeType.REFRESH
     })
     @JoinTable(
-            name = "book_categorylist",
+            name = "book_category",
             joinColumns = @JoinColumn(name = "code_category"),
             inverseJoinColumns = @JoinColumn(name = "code_book")
     )

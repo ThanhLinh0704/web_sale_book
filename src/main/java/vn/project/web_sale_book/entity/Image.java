@@ -12,7 +12,7 @@ public class Image {
     @Column(name = "code_image")
     private int codeImage;
 
-    @Column(name = "name_image", length = 256)
+    @Column(name = "name_image")
     private String nameImage;
 
     @Column(name = "is_icon")
