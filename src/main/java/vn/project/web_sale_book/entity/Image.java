@@ -21,7 +21,7 @@ public class Image {
     @Column(name = "url")
     private String url;
 
-    @Column(name = "data_image")
+    @Column(name = "data_image", columnDefinition = "LONGTEXT")
     @Lob
     private String dataImage;
 

@@ -14,10 +14,10 @@ public class Book {
     @Column(name = "code_book")
     private int codeBook;
 
-    @Column(name = "name_book", length = 255)
+    @Column(name = "name_book")
     private String nameBook;
 
-    @Column(name = "author", length = 255)
+    @Column(name = "author")
     private String author;
 
     @Column(name = "isbn", length = 255)
