@@ -13,7 +13,7 @@ import vn.project.web_sale_book.entity.User;
 
 @Configuration
 public class MethodRestConfig implements RepositoryRestConfigurer {
-    private String url = "http://localhost:3000";
+    private String url = "http://localhost:5174";
     @Autowired
     private EntityManager entityManager;
     @Override
@@ -30,19 +30,19 @@ public class MethodRestConfig implements RepositoryRestConfigurer {
 
 
         // Chặn các methods
-        HttpMethod[] chanCacPhuongThuc ={
-                HttpMethod.POST,
-                HttpMethod.PUT,
-                HttpMethod.PATCH,
-                HttpMethod.DELETE,
-        };
-        disableHttpMethods(Category.class, config, chanCacPhuongThuc);
-
-        // Chặn các method DELETE
-        HttpMethod[] phuongThucDelete = {
-                HttpMethod.DELETE
-        };
-        disableHttpMethods(User.class, config,phuongThucDelete );
+//        HttpMethod[] chanCacPhuongThuc ={
+//                HttpMethod.POST,
+//                HttpMethod.PUT,
+//                HttpMethod.PATCH,
+//                HttpMethod.DELETE,
+//        };
+//        disableHttpMethods(Category.class, config, chanCacPhuongThuc);
+//
+//        // Chặn các method DELETE
+//        HttpMethod[] phuongThucDelete = {
+//                HttpMethod.DELETE
+//        };
+//        disableHttpMethods(User.class, config,phuongThucDelete );
     }
 
     private void disableHttpMethods(Class c,

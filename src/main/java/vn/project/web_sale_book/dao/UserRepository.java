@@ -6,4 +6,9 @@ import vn.project.web_sale_book.entity.User;
 
 @RepositoryRestResource(path = "user")
 public interface UserRepository extends JpaRepository<User, Integer> {
+    public boolean existsByUsername(String username);
+
+    public boolean existsByEmail(String email);
+
+    public User findByUsername(String username);
 }
